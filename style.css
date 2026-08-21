@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe8f1, #f8c5da);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.app {
+    width: 950px;
+    max-width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+
+/* Cards */
+
+.calculator,
+.result-card {
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 15px 40px rgba(120, 30, 70, 0.15);
+}
+
+
+/* Heading */
+
+h1 {
+    margin: 0;
+
+    font-size: 32px;
+
+    color: #35152b;
+}
+
+.subtitle {
+    color: #888;
+
+    margin-top: 8px;
+    margin-bottom: 38px;
+}
+
+
+/* Input */
+
+.input-group {
+    margin-bottom: 32px;
+}
+
+.label-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 14px;
+}
+
+.label-row label {
+    font-weight: bold;
+
+    color: #333;
+}
+
+.label-row strong {
+    color: #c2185b;
+}
+
+
+/* Slider */
+
+input[type="range"] {
+    width: 100%;
+
+    height: 6px;
+
+    accent-color: #d81b60;
+
+    cursor: pointer;
+}
+
+
+/* Slider labels */
+
+.range-labels {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 7px;
+
+    font-size: 12px;
+
+    color: #999;
+}
+
+
+/* Button */
+
+button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #d81b60,
+        #ad1457
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(216, 27, 96, 0.3);
+}
+
+
+/* Result */
+
+.result-card {
+    background: linear-gradient(
+        145deg,
+        #d81b60,
+        #880e4f
+    );
+
+    color: white;
+}
+
+.result-title {
+    margin: 0;
+
+    font-size: 18px;
+
+    opacity: 0.9;
+}
+
+#result {
+    font-size: 44px;
+
+    margin: 10px 0 30px;
+}
+
+
+/* Details */
+
+.details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.detail-box {
+    background: rgba(255, 255, 255, 0.15);
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.detail-box span {
+    opacity: 0.85;
+}
+
+
+/* Breakdown */
+
+.breakdown {
+    margin-top: 30px;
+}
+
+.breakdown-title {
+    font-size: 15px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Breakdown bar */
+
+.bar {
+    width: 100%;
+
+    height: 12px;
+
+    background: rgba(255,255,255,0.25);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+#principalBar {
+    height: 100%;
+
+    width: 50%;
+
+    background: white;
+
+    border-radius: 10px;
+}
+
+
+/* Legend */
+
+.legend {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 12px;
+
+    font-size: 13px;
+}
+
+.legend span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.legend i {
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+.principal-dot {
+    background: white;
+}
+
+.interest-dot {
+    background: rgba(255,255,255,0.35);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .app {
+        grid-template-columns: 1fr;
+    }
+
+    .calculator,
+    .result-card {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #result {
+        font-size: 36px;
+    }
+}
